@@ -1,0 +1,18 @@
+@use "@hauke5/components/styles/standardButton.scss" with (
+   $hoverBrightness:  0.9,
+);
+
+.newGitVersion {
+   @include standardButton.btnStyle();
+   display:flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   min-width: 30px;
+   font-size: 70%;
+   margin: 0 10px;
+   padding: 0 5px;
+   background-color: #8f8;
+   fill: #080;
+}
