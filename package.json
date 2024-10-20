@@ -1,6 +1,6 @@
 {
   "name": "@hauke5/lib",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "nextjs libraries for use with @hauke5 apps",
   "main": "index.js",
   "devDependencies": {},
