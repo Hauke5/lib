@@ -21,7 +21,10 @@ export interface AppTitleBarProps extends BaseProps {
  * Shows the app title bar, consisting of
  * - the app `title` on the left
  * - app-specific `children` in the middle
- * - app-specific `controls`, e.g. authentication information, along with a sign-ount and home button on the right
+ * - app-specific `controls`, e.g. authentication information along with a sign-out (if `auth` is `true`), and a home button on the right
+ * @param param0 
+ * - children: any React children to display in the middle of the title bar row
+ * - `auth`: (default=`false`); if `true`, show the authenticated user, role and sign-out button
  */
 export function AppTitleBar({children, auth=false, title}:AppTitleBarProps) {
    const appDesc                             = useAppDesc()

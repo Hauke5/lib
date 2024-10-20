@@ -27,7 +27,7 @@ export type Permissions = {
 
 
 
-export interface FilePathInfo {
+export type FilePathInfo = {
    appKey:        string
    path:          string         // the path this info is for
    isFile:        boolean        // path is a file

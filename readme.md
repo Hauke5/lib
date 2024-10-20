@@ -26,4 +26,14 @@ Currently implemented DB adapters:
 support for using `ErrorBoundarys`
 
 ## fetcher
+utility to provide a `fetch` function that supports caching, pacing, and authentications
+
+## fileIO
+provides sandboxed fileIO operations on the server to browser components.
+
+## hooks
+a collection of hooks for use by apps and components
+
+## utils
+a collection of utility functions for use by apps and components. See the `readme.md` inside the `utils` folder
 
