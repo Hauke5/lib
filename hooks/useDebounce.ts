@@ -1,5 +1,5 @@
 import { useRef }       from "react"
-import { getDebouncer } from "@hauke5/lib/utils/timing"
+import { getDebouncer } from "lib/utils/timing"
 
 
 export function useDebounce() {

@@ -2,7 +2,7 @@
 import { usePathname }     from 'next/navigation';
 import { ReactNode, useEffect, useRef }       
                            from 'react';
-import { useAppsContext }  from '@hauke5/lib/apps/useAppsContext';
+import { useAppsContext }  from 'lib/apps/useAppsContext';
 
 export interface AppDesc {
    key:     string

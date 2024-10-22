@@ -7,7 +7,7 @@
  */
 'use client'
 import { useRef }          from 'react'
-import { Log, LogOptions } from '@hauke5/lib/utils/log'
+import { Log, LogOptions } from 'lib/utils/log'
 
 
 export function useLog(prefix:string, options?: Partial<LogOptions>) {

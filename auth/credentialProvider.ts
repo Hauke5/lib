@@ -2,7 +2,7 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import process             from 'process'
 import crypto              from 'crypto'
 import path                from 'path'
-import {readJsonFileSync}  from '@hauke5/lib/fileIO/fsUtil'
+import {readJsonFileSync}  from 'lib/fileIO/fsUtil'
 import { Log }             from '../utils'
 
 const log = Log(`credentialProvider`)

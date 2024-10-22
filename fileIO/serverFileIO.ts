@@ -38,11 +38,11 @@
 import * as fsNode            from 'fs'
 import path                   from 'path'
 import { getServerSession }   from 'next-auth';
-import { ALL_USERS }          from '@hauke5/lib/apps/types';
-import { formatDate, ms }     from '@hauke5/lib/utils/date';
-import { Log }                from '@hauke5/lib/utils/log';
-import { authOptions }        from '@hauke5/lib/auth/authOptions';
-import fs, { Times }          from '@hauke5/lib/fileIO/fsUtil'
+import { ALL_USERS }          from 'lib/apps/types';
+import { formatDate, ms }     from 'lib/utils/date';
+import { Log }                from 'lib/utils/log';
+import { authOptions }        from 'lib/auth/authOptions';
+import fs, { Times }          from 'lib/fileIO/fsUtil'
 import { AccessFileSpec, ApiError, FilePathInfo, Permission, Permissions, Versioning }        
                               from './fileIOsupport';
 import {DataRoot, initializeDataRoot}   

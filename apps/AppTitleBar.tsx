@@ -1,13 +1,13 @@
 'use client'
 import Link                      from 'next/link'
 import { mdiHomeImportOutline }  from '@mdi/js'
-import { SignedInAs }            from '@hauke5/lib/auth/SignedInAs'
-import { Icon }                  from '@hauke5/components/Icon'
-import { useAppDesc }            from '@hauke5/lib/apps/useAppDesc'
-import { ErrorBoundarySuspense } from '@hauke5/lib/errors/ErrorBoundary'
-import { BaseProps }             from '@hauke5/components/BaseProps'
+import { SignedInAs }            from 'lib/auth/SignedInAs'
+import { Icon }                  from 'components/Icon'
+import { useAppDesc }            from 'lib/apps/useAppDesc'
+import { ErrorBoundarySuspense } from 'lib/errors/ErrorBoundary'
+import { BaseProps }             from 'components/BaseProps'
 import styles                    from './AppTitleBar.module.scss'
-import { useGitBranch } from '@hauke5/lib/apps/useGitBranch'
+import { useGitBranch } from 'lib/apps/useGitBranch'
 
 
 export interface AppTitleBarProps extends BaseProps {

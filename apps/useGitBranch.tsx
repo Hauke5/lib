@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState }     
                         from "react";
-import { formatDate }   from "@hauke5/lib/utils";
+import { formatDate }   from "lib/utils";
 import { getNewestGitBranch, getRunningGitBranch } 
                         from "./getGitBranch";
 import styles           from './appStyles.module.scss'

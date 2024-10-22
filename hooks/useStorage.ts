@@ -1,6 +1,6 @@
 'use client'
 
-import { Log }    from '@hauke5/lib/utils/log'
+import { Log }    from 'lib/utils/log'
 import { useAppDesc } from '../apps'
 
 const log = Log(`useStorage`)

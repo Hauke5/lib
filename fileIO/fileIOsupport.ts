@@ -1,4 +1,4 @@
-import { Times } from "@hauke5/lib/fileIO/fsUtil"
+import { Times } from "lib/fileIO/fsUtil"
 
 export class ApiError extends Error {
    constructor(message:string, ...args:any[]) { super(message, ...args) }

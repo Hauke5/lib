@@ -1,5 +1,5 @@
 import path          from "path"
-import fs            from '@hauke5/lib/fileIO/fsUtil'
+import fs            from 'lib/fileIO/fsUtil'
 
 export const DataRoot = path.join(process.cwd(),'./data')
 

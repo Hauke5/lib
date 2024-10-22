@@ -4,8 +4,8 @@ import { signIn, signOut }
                            from 'next-auth/react'
 import { mdiAccountCog, mdiAccountGroup, mdiLogin, mdiLogout, mdiShieldAccount } 
                            from '@mdi/js'
-import { Icon }            from '@hauke5/components/Icon'
-import { Log }             from '@hauke5/lib/utils'
+import { Icon }            from 'components/Icon'
+import { Log }             from 'lib/utils'
 import styles              from './Auth.module.scss'
 import { useAuthContext }  from './useAuthContext'
 

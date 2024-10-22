@@ -2,10 +2,10 @@
 import { ChangeEvent, Fragment, useRef, useState } 
                         from "react"
 import { signIn }       from "next-auth/react"
-import { Provider }     from "@hauke5/lib/auth/authOptions"
-import { Log }          from "@hauke5/lib/utils"
+import { Provider }     from "lib/auth/authOptions"
+import { Log }          from "lib/utils"
 import { Dialog, OpenDialog } 
-                        from "@hauke5/components/Dialog"
+                        from "components/Dialog"
 import styles           from './signin.module.scss'
 import { login, signUp }
                         from "./passkeysClient"

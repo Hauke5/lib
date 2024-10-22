@@ -1,7 +1,7 @@
 'use server'
 import path          from 'path';
-import * as fs       from '@hauke5/lib/fileIO/fsUtil'
-import { RoleDesc }  from '@hauke5/lib/apps/types';
+import * as fs       from 'lib/fileIO/fsUtil'
+import { RoleDesc }  from 'lib/apps/types';
 import { DataRoot }  from '../fileIO/initializeDataRoot';
 
 

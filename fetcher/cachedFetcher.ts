@@ -1,4 +1,4 @@
-import { Log }    from '@hauke5/lib/utils/log'
+import { Log }    from 'lib/utils/log'
 import { Fetch }  from './fetcher';
 import { Times } from '../fileIO/fsUtil';
 

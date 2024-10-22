@@ -1,5 +1,5 @@
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { Log }             from '@hauke5/lib/utils';
+import { Log }             from 'lib/utils';
 
 const log = Log(`passKeyProvider`)
 

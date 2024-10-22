@@ -1,4 +1,4 @@
-import { Log }       from "@hauke5/lib/utils"
+import { Log }       from "lib/utils"
 import { useEffect } from "react"
 
 const log = Log(`useCamera`)

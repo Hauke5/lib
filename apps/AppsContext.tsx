@@ -1,9 +1,9 @@
 'use client'
 import { createContext }      from "react";
-import { AppDesc }            from "@hauke5/lib/apps/useAppDesc";
-import { ChildrenOnlyProps }  from "@hauke5/components/BaseProps";
-import { UpdateContext }      from "@hauke5/lib/hooks/useContextState";
-import { RoleDesc }           from "@hauke5/lib/apps/types";
+import { AppDesc }            from "lib/apps/useAppDesc";
+import { ChildrenOnlyProps }  from "components/BaseProps";
+import { UpdateContext }      from "lib/hooks/useContextState";
+import { RoleDesc }           from "lib/apps/types";
 
 
 export type AppsContext =  {

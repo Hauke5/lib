@@ -1,7 +1,7 @@
-import { serverState }     from "@hauke5/lib/apps/serverState"
-import { checkPermission } from "@hauke5/lib/auth/checkPermission"
-import { Role }            from "@hauke5/lib/apps/types"
-import { Log }             from "@hauke5/lib/utils"
+import { serverState }     from "lib/apps/serverState"
+import { checkPermission } from "lib/auth/checkPermission"
+import { Role }            from "lib/apps/types"
+import { Log }             from "lib/utils"
 
 
 const log            = Log(`prismaClient`)
