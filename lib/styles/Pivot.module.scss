@@ -1,0 +1,30 @@
+
+.pivot {
+    font-size:80%;
+    .right    { 
+        text-align:right; 
+    }
+    .header {
+        height: 1.4em;
+        background-color: #66a;
+        color: white;
+        padding-left: 5px;
+    }
+    .row {
+        width: 100%;
+        padding:0;
+        height: 1.4em;
+    }
+    .name { 
+        white-space: nowrap;
+    }
+    span {
+        padding: 0 5px;
+    }
+
+    .level0   { background-color: #99b; color: white; }
+    .level1   { background-color: #bbd; color: black; }
+    .level2   { background-color: #ddf; color: black; }
+    .level3   { background-color: #eee; color: black; }
+    .level4   { background-color: #fff; color: black; }
+}
