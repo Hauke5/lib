@@ -11,7 +11,7 @@ export type AccessFileSpec = {
    grant?:  string[]
 }
 
-export type Permission = {
+export type FilePermission = {
    user:    string
    /** user has read permission to the directory or files therein */
    read:    boolean
@@ -21,8 +21,8 @@ export type Permission = {
    grant:   boolean
 }
 
-export type Permissions = {
-   [user:string]: Partial<Permission>
+export type FilePermissions = {
+   [user:string]: Partial<FilePermission>
 }
 
 
@@ -40,7 +40,7 @@ export type FilePathInfo = {
 
 export type AppFileIO = {
    pathInfo:   (path:string)              => Promise<FilePathInfo|undefined>
-   hasAccess:  (file:string)              => Promise<Permission|undefined>
+   hasAccess:  (file:string)              => Promise<FilePermission|undefined>
    isFile:     (file:string)              => Promise<boolean|undefined>
    isDir:      (path:string)              => Promise<boolean|undefined>
    binRead:    (file:string)              => Promise<string|undefined>

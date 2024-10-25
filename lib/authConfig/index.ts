@@ -1,2 +1,2 @@
-export * from './credentialProvider'
+export * from './checkAllowedRoles'
 export * from './authOptions'

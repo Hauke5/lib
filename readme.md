@@ -9,13 +9,10 @@ support for multi-app launch pages
 - `useGitBranch`: provided information on the currently active git branch in the CWD
 - `serverState`: provides a server-side status mechanism.
 
-## auth
+## authConfig
 support for `next-auth`-based authentication in apps and components.
-- `SignedInAs`: component to show the currently logged in user and their role.
-- `SignInPage`: custom sign-in page
-- `AuthContext`: provides the authetication context to pages and components
-- `useAuthContext`: used in conjunction with `AuthContext`
-- `useAuthorizedUserName`: shorthand hook to directly retrieve the name of the logged in user
+- `checkPermission`: checks the permissions of the currently logged in user against the provided `permissions` roles
+- `authOptions`: configuration structure for `next-auth`
 
 ## db
 database support functions

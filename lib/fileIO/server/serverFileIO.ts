@@ -41,8 +41,8 @@ import { getServerSession }   from 'next-auth';
 import { ALL_USERS }          from 'lib/apps/types';
 import { formatDate, ms }     from 'lib/utils/date';
 import { Log }                from 'lib/utils/log';
-import { authOptions }        from 'lib/authConfig/authOptions';
-import { AccessFileSpec, ApiError, FilePathInfo, Permission, Permissions, Versioning }        
+import { authOptions }        from 'lib/authConfig';
+import { AccessFileSpec, ApiError, FilePathInfo, FilePermission, FilePermissions, Versioning }        
                               from '../client/fileIOsupport';
 import {DataRoot, initializeDataRoot}   
                               from './initializeDataRoot'
@@ -72,7 +72,7 @@ export type ServerWriteOptions = {
  * - `file` attempt to breach the sandboxed `appKey` directory
  * - reading `file` is denied for the currently authenticated user
  */
-export async function serverHasAccess(appKey:string, file:string):Promise<Permission> {
+export async function serverHasAccess(appKey:string, file:string):Promise<FilePermission> {
    try {
       const fileName = checkForValidAppPath(appKey, file)
       const {perm} = await hasPermission(fileName)
@@ -409,8 +409,8 @@ function checkForValidAppPath(appKey:string, file:string) {
 
 
 type HasPermission = {
-   perm:    Permission
-   perms:   Permissions
+   perm:    FilePermission
+   perms:   FilePermissions
    sharing: AccessFileSpec
 }
 export async function hasPermission(fileName:string):Promise<HasPermission> {
@@ -474,8 +474,8 @@ function isHiddenFile(fileWithPath:string):boolean {
  * @param absfile the canonical absolute path to the file on the server
  * @return Permissions object
  */
-function getPermissions(absfile:string):Permissions {
-   const permissions:Permissions = {[ALL_USERS]: {user:ALL_USERS, read:undefined, write:undefined, grant:false}}
+function getPermissions(absfile:string):FilePermissions {
+   const permissions:FilePermissions = {[ALL_USERS]: {user:ALL_USERS, read:undefined, write:undefined, grant:false}}
 
    const start = absfile.indexOf(DataRoot)
    const parts = absfile.substring(start+DataRoot.length).split('/') //.filter(p => p !== request.fileName)
@@ -493,7 +493,7 @@ function getPermissions(absfile:string):Permissions {
    return permissions
 }
    
-function updatePermissions(permissions:Permissions, accessFile:string) {
+function updatePermissions(permissions:FilePermissions, accessFile:string) {
    try {
       // read access file
       const accessSpec = fs.isFileSync(accessFile)
@@ -635,7 +635,7 @@ function checkAndCreateVersioning(file:string, versioning:Versioning) {
    }
 }
 
-function permissionsToAccessSpecs(permissions:Permissions):AccessFileSpec {
+function permissionsToAccessSpecs(permissions:FilePermissions):AccessFileSpec {
    const users = Object.keys(permissions)
    return {
       read:  users.filter(user => permissions[user].read),
@@ -644,7 +644,7 @@ function permissionsToAccessSpecs(permissions:Permissions):AccessFileSpec {
    }
 }
 
-function message(p:Permissions) {
+function message(p:FilePermissions) {
    const users = Object.keys(p)
    const perms = [
       users.filter(user => p[user].read !==false).map(user => p[user].read ===true?`${user}`:`-${user}`).join(','),

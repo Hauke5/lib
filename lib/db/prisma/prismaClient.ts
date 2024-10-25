@@ -1,5 +1,5 @@
 import { serverState }     from "lib/apps/serverState"
-import { checkPermission } from "lib/authConfig/checkPermission"
+import { checkAllowedRoles } from "lib/authConfig"
 import { Role }            from "lib/apps/types"
 import { Log }             from "lib/utils"
 
@@ -43,7 +43,7 @@ export class DBAccessError extends Error {}
  * @throws
  */
 export async function getDBPrisma<T>(database:string, requiredRoles: Role[], createPrisma:(url:string)=>T):Promise<PrismaGlobal<T>> {
-   const permissions = await checkPermission(requiredRoles)
+   const permissions = await checkAllowedRoles(requiredRoles)
    if (!permissions.fulfilled) {
       log.warn(`attempt to connect to SQL '${database}' as '${permissions.user}' without required permission`)
       throw new DBAccessError(`attempt to connect to SQL '${database}' as '${permissions.user}' without required permission`)
